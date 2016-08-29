@@ -14,6 +14,8 @@
         completions."
     </string>
 
-
+    <string name="username">jdoe</string>
+    <string name="password">welcome1</string>
     <string name="successful_login">You are now logged in</string>
+
 </resources>
