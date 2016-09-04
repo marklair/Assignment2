@@ -14,8 +14,12 @@
         completions."
     </string>
 
-    <string name="username">jdoe</string>
+    <string name="username">JDOE</string>
     <string name="password">welcome1</string>
     <string name="successful_login">You are now logged in</string>
+    <string name="title_activity_user_account">UserAccountActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
