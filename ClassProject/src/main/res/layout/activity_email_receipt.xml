@@ -11,11 +11,26 @@
     tools:context="com.bignerdranch.android.assignment2.EmailReceiptActivity">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Logged In: JDOE"
-        android:id="@+id/fragment_logged_in"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" "/>
 
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:text="@string/fragment_login_message"
+        android:layout_gravity="left|top"
+        android:id="@+id/fragment_login_message"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/username"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_alignTop="@+id/fragment_login_message"
+        android:layout_toRightOf="@+id/fragment_login_message"
+        android:layout_toEndOf="@+id/fragment_login_message"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
