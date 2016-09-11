@@ -3,6 +3,7 @@ package com.bignerdranch.android.assignment2;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -37,6 +38,9 @@ import static android.Manifest.permission.READ_CONTACTS;
  * A login screen that offers login via email/password.
  */
 public class LaunchActivity extends AppCompatActivity implements LoaderCallbacks<Cursor> {
+
+    Button btn_signin;
+    Button btn_register;
 
     /**
      * Id to identity READ_CONTACTS permission request.
@@ -81,19 +85,23 @@ public class LaunchActivity extends AppCompatActivity implements LoaderCallbacks
             }
         });
 
-        Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
-        mEmailSignInButton.setOnClickListener(new OnClickListener() {
+        btn_signin = (Button)findViewById(R.id.email_sign_in_button);
+        btn_signin.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onClick(View view) {
-                attemptLogin();
+            public void onClick(View v){
+                //Use the name of this class, and the name class where you want to be taken when the button is clicked.
+                Intent intent = new Intent(LaunchActivity.this, UserAccountActivity.class);
+                startActivity(intent);
             }
         });
 
-        Button mEmailRegisterButton = (Button) findViewById(R.id.email_register_button);
-        mEmailRegisterButton.setOnClickListener(new OnClickListener() {
+        btn_register = (Button)findViewById(R.id.email_register_button);
+        btn_register.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onClick(View view) {
-                attemptLogin();
+            public void onClick(View v){
+                //Use the name of this class, and the name class where you want to be taken when the button is clicked.
+                Intent intent = new Intent(LaunchActivity.this, RegisterActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -252,7 +260,7 @@ public class LaunchActivity extends AppCompatActivity implements LoaderCallbacks
                 // Select only email addresses.
                 ContactsContract.Contacts.Data.MIMETYPE +
                         " = ?", new String[]{ContactsContract.CommonDataKinds.Email
-                                                                     .CONTENT_ITEM_TYPE},
+                .CONTENT_ITEM_TYPE},
 
                 // Show primary email addresses first. Note that there won't be
                 // a primary email address if the user hasn't specified one.
@@ -353,4 +361,3 @@ public class LaunchActivity extends AppCompatActivity implements LoaderCallbacks
         }
     }
 }
-

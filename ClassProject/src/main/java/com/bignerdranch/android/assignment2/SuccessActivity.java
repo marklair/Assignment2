@@ -9,14 +9,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class PaymentActivity extends AppCompatActivity {
-    Button btn_paynow;
+public class SuccessActivity extends AppCompatActivity {
+    Button btn_myaccount;
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_options_menu, menu);
         menu.findItem(R.menu.main_options_menu).setIntent(
-                new Intent(PaymentActivity.this, LaunchActivity.class));
+                new Intent(SuccessActivity.this, LaunchActivity.class));
         return true;
     }
 
@@ -26,7 +27,7 @@ public class PaymentActivity extends AppCompatActivity {
         if (id == R.id.logoff_menu_item) {
             super.onOptionsItemSelected(item);
             Toast.makeText(this, "Logging You Off...", Toast.LENGTH_LONG).show();
-            startActivity(new Intent(PaymentActivity.this, LaunchActivity.class));
+            startActivity(new Intent(SuccessActivity.this, LaunchActivity.class));
         }
 
         return true;
@@ -35,13 +36,13 @@ public class PaymentActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_payment);
-        btn_paynow = (Button)findViewById(R.id.pay_now_button);
-        btn_paynow.setOnClickListener(new View.OnClickListener(){
+        setContentView(R.layout.activity_success);
+        btn_myaccount = (Button)findViewById(R.id.my_account_button);
+        btn_myaccount.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 //Use the name of this class, and the name class where you want to be taken when the button is clicked.
-                Intent intent = new Intent(PaymentActivity.this, ReceiptActivity.class);
+                Intent intent = new Intent(SuccessActivity.this, UserAccountActivity.class);
                 startActivity(intent);
             }
         });
