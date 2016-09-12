@@ -10,22 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.bignerdranch.android.assignment2.RegisterActivity">
 
-    <menu
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignBottom="@+id/fragment_login_message">
 
-        <item
-            android:id="@+id/logoff_menu_item"
-            android:title="@string/logoff_menu_item"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        </item>
-    </menu>
 
     <TextView
         android:layout_width="wrap_content"

@@ -16,10 +16,9 @@ public class NewSessionActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main_options_menu, menu);
-        menu.findItem(R.menu.main_options_menu).setIntent(
-                new Intent(NewSessionActivity.this, LaunchActivity.class));
-        return true;
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_options_menu, menu);
+        return  true;
     }
 
     @Override
