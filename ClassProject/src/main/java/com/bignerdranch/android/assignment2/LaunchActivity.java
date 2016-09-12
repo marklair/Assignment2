@@ -31,8 +31,6 @@ public class LaunchActivity extends AppCompatActivity {
         setContentView(R.layout.activity_launch);
         mEmailView = (EditText) findViewById(R.id.email);
         mPasswordView = (EditText) findViewById(R.id.password);
-
-
         btn_signin = (Button)findViewById(R.id.email_sign_in_button);
         btn_signin.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -54,19 +52,17 @@ public class LaunchActivity extends AppCompatActivity {
 
     }
 
-    private void attemptLogin() {
+    private void LogInErrors () {
 
 
         mEmailView.setError(null);
         mPasswordView.setError(null);
-
 
         String email = mEmailView.getText().toString();
         String password = mPasswordView.getText().toString();
 
         boolean cancel = false;
         View focusView = null;
-
 
         if (TextUtils.isEmpty(email)) {
             mEmailView.setError(getString(R.string.error_field_required));
