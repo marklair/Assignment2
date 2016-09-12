@@ -74,13 +74,13 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="41dp"
-        android:text="Cardio"/>
+        android:text="@string/session1"/>
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/session_time"
-        android:text="00:30"
+        android:text="@string/session_time1"
         android:layout_alignTop="@+id/example_cardio"
         android:layout_alignLeft="@+id/view_all_session_time"
         android:layout_alignStart="@+id/view_all_session_time"/>
@@ -89,7 +89,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/example_pilates"
-        android:text="Pilates"
+        android:text="@string/session2"
         android:layout_below="@+id/example_cardio"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
@@ -98,7 +98,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/example_aerobics"
-        android:text="Aerobics"
+        android:text="@string/session3"
         android:layout_below="@+id/example_pilates"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
@@ -107,7 +107,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/pilates_time"
-        android:text="00:20"
+        android:text="@string/session_time1"
         android:layout_above="@+id/example_aerobics"
         android:layout_alignLeft="@+id/session_time"
         android:layout_alignStart="@+id/session_time"/>
@@ -116,7 +116,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/aerobics_time"
-        android:text="00:30"
+        android:text="@string/session_time1"
         android:layout_below="@+id/pilates_time"
         android:layout_alignLeft="@+id/pilates_time"
         android:layout_alignStart="@+id/pilates_time"/>

@@ -24,4 +24,16 @@
 
     <string name="fragment_login_message">Logged In: </string>
     <string name="logoff_menu_item">Log Off</string>
+    <string name="user1_name"> JDOE</string>
+    <string name="user1_age"> 30</string>
+    <string name="session1">Cardio</string>
+    <string name="session2">Pilates</string>
+    <string name="session3">Aerobics</string>
+    <string name="session_time1">00:30</string>
+    <string name="session_time2">00:20</string>
+    <string name="session_time3">00:30</string>
+
+
+
+
 </resources>

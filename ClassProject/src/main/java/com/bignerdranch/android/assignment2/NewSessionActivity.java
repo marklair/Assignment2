@@ -18,7 +18,7 @@ public class NewSessionActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.main_options_menu, menu);
-        return  true;
+        return true;
     }
 
     @Override
@@ -36,6 +36,8 @@ public class NewSessionActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_new_session);
+
         btn_new_submit = (Button)findViewById(R.id.new_session_submit_button);
         btn_new_submit.setOnClickListener(new View.OnClickListener(){
             @Override
